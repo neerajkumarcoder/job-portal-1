@@ -15,19 +15,19 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 
 //middleware
-app.use(cors({ origin: true, credentials: true }));
+// app.use(cors({ origin: true, credentials: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-// const corsOptions = {
-//   origin: ["http://localhost:5173"],
-//   credentials: true,
-// };
+const corsOptions = {
+  origin: ["https://job-portal-1-vmaw.onrender.com", "http://localhost:5173"],
+  credentials: true,
+};
 
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 
-//api's
+
 
 const _dirname = path.resolve();
 
