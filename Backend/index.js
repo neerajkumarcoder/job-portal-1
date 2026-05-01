@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 const corsOptions = {
-  origin: ["https://job-portal-1-vmaw.onrender.com", "http://localhost:5173"],
+  origin: ["https://job-portal-1-vmaw.onrender.com"],
   credentials: true,
 };
 
